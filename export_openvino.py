@@ -6,12 +6,12 @@ import cv2
 # 导出模型必须参数
 NEED_TEST = True
 INT8 = False
-HALF = True
-EXPORT_PATH = r"E:\code\ultralytics\runs\detect\train10\weights"
+HALF = False
+EXPORT_PATH = r"E:\code\ultralytics\runs\detect\train15\weights"
 
 # 测试图像必须参数
-TEST_INPUT_DIR = r"E:\code\data\test_custom\\7"
-TEST_OUTPUT_DIR = r"E:\code\data\tmp\test_result5"
+TEST_INPUT_DIR = r"E:\code\data\gen_barcode_data\train\20241114\images"
+TEST_OUTPUT_DIR = r"E:\code\data\tmp\test_result_20241115"
 CONF = 0.7
 
 def process_images_in_folder(input_folder, output_folder,ov_model):
@@ -49,6 +49,7 @@ def process_images_in_folder(input_folder, output_folder,ov_model):
                     cv2.imwrite(output_image_path, img)
                 except Exception as e:
                     print(f"处理图像 {input_image_path} 时出错: {e}")
+    print("[INFO] save done")
 
 # Load a YOLOv8n PyTorch model
 pt_model_path = os.path.join(EXPORT_PATH,"last.pt")

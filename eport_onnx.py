@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 
 # 加载预训练的YOLOv8模型，这里以yolov8n为例，你可以根据需要更换成其他尺寸的模型，如yolov8s、yolov8m等
-model = YOLO(r'E:\code\ultralytics\runs\detect\train9\weights\last.pt')
+model = YOLO(r'E:\code\ultralytics\runs\detect\train15\weights\best.pt')
 
 # 设置导出ONNX模型的参数，包括简化模型、动态输入尺寸等（可根据需求调整）
 export_params = {

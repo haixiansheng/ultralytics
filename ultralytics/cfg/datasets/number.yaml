@@ -8,12 +8,20 @@
 #     └── coco  ← downloads here (20.1 GB)
 
 # Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
-path: E:/code/data/gen_barcode_data/ # dataset root dir
+path: E:/code/data/number_roi # dataset root dir
 train: train # train images (relative to 'path') 118287 images
-val: 20241102/ # val images (relative to 'path') 5000 images
-test: 20241102/ # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
+val: train # val images (relative to 'path') 5000 images
+test: train # 20288 of 40670 images, submit to https://competitions.codalab.org/competitions/20794
 
 # Classes
 names:
-  0: barcode
-  1: fp
+  0: 0
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 5
+  6: 6
+  7: 7
+  8: 8
+  9: 9
