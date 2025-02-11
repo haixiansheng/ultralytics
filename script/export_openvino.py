@@ -4,14 +4,14 @@ import cv2
 
 
 # 导出模型必须参数
-NEED_TEST = True
+NEED_TEST = False
 INT8 = False
 HALF = False
-EXPORT_PATH = r"E:\code\ultralytics\runs\detect\train15\weights"
+EXPORT_PATH = r"E:\code\ultralytics\runs\detect\train13\weights"
 
 # 测试图像必须参数
-TEST_INPUT_DIR = r"E:\code\data\gen_barcode_data\train\20241114\images"
-TEST_OUTPUT_DIR = r"E:\code\data\tmp\test_result_20241115"
+TEST_INPUT_DIR = r"E:\code\test_dll\x64\Release\test\images"
+TEST_OUTPUT_DIR = r"E:\code\data\tmp\test_result_20241117"
 CONF = 0.7
 
 def process_images_in_folder(input_folder, output_folder,ov_model):
@@ -52,7 +52,7 @@ def process_images_in_folder(input_folder, output_folder,ov_model):
     print("[INFO] save done")
 
 # Load a YOLOv8n PyTorch model
-pt_model_path = os.path.join(EXPORT_PATH,"last.pt")
+pt_model_path = os.path.join(EXPORT_PATH,"best.pt")
 model = YOLO(pt_model_path)
 
 # Export the model
